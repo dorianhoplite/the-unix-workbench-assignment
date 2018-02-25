@@ -4,7 +4,7 @@ printf '\n';printf '%*s\n' "$termwidth" '' | tr ' ' =
 
 echo "This program dares you to guess how many files and folders are in the current directory (including hidden files). If you are too afraid to guess, you can bravely retreat by pressing 'Control' + 'C'. Otherwise, arm yourself and press 'Enter'." | fold -sw "$termwidth" || true
 
-printf '%*s\n' "${COLUMNS:-$termwidth}" '' | tr ' ' =;printf '\n'
+printf '%*s\n' "$termwidth" '' | tr ' ' =;printf '\n'
 read -p ""
 
 function get_file_num {
